@@ -19,6 +19,11 @@
   box-shadow: 2px 5px 1em lightgray;
 }
 
+.post:hover{
+  box-shadow: 2px 5px 1em darkgray;
+  cursor: pointer;
+}
+
 .title {
   width: 100%;
   border-radius: 10px 10px 0 0;
