@@ -1,7 +1,13 @@
 const express = require('express')
 const app = express()
 
+app.use(express.json())
+
 const db = require('./models')
+
+// Routers
+const postRouter = require('./routes/posts')
+app.use('/posts', postRouter)
 
 db.sequelize.sync().then(() => { //initialize the db and, then, the server starts to run on the indicated port
     app.listen(3001, () => { //anonymous function that runs whenever the server starts
